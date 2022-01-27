@@ -1,8 +1,13 @@
 <template>
-  <div v-for="(element, index) in merchElement" :key="index" class="merch">
-    <img :src="element.img" alt="">
-    <span></span>
+  <div class="container">
+    <div class="merch">
+      <div v-for="(element, index) in merchElement" :key="index" >
+        <img :src="element.img" alt="">
+        <a href="">{{element.text}}</a>
+      </div>
+    </div> 
   </div>
+   
 </template>
 
 <script>
@@ -12,7 +17,7 @@ export default {
       return{
         merchElement: [
           {
-            img: '../../assets/img/buy-comics-digital-comics.png',
+            img: './src/assets/img/buy-comics-digital-comics.png',
             text: 'digital comics'
           },
            {
@@ -37,6 +42,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 
+.merch{
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+
+  div a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+img{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
 </style>

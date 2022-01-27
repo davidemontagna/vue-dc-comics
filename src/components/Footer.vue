@@ -28,5 +28,8 @@ footer{
 .shop-merch-container{
     height: 150px;
     background-color: $navcolor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 </style>
