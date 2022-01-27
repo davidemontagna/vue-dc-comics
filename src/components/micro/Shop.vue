@@ -17,23 +17,23 @@ export default {
       return{
         merchElement: [
           {
-            img: './src/assets/img/buy-comics-digital-comics.png',
+            img: require('../../assets/img/buy-comics-digital-comics.png'),
             text: 'digital comics'
           },
            {
-            img: '../../assets/img/buy-comics-merchandise.png',
+            img: require('../../assets/img/buy-comics-merchandise.png'),
             text: 'dc merchandise'
           },
            {
-            img: '../../assets/img/buy-comics-subscription.png',
+            img: require('../../assets/img/buy-comics-subscriptions.png'),
             text: 'subscription'
           },
            {
-            img: '../../assets/img/buy-comics-shop-locator.png',
+            img: require('../../assets/img/buy-comics-shop-locator.png'),
             text: 'comic shop locator'
           },
            {
-            img: '../../assets/img/buy-dc-power-visa.svg',
+            img: require('../../assets/img/buy-dc-power-visa.svg'),
             text: 'dc power visa'
           }
         ]
@@ -43,23 +43,36 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.container{
+  margin: 0 auto;
+  width: 100%;
+}
 
 .merch{
-  width: 1000px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  
 
-  div a{
+  div{
+    width: 15%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    a{
+      margin-left: 10px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     font-size: 15px;
   }
+  }
+
+  
 }
 
 img{
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
+  height: 40px;  
 }
 </style>
