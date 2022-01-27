@@ -77,6 +77,7 @@ export default {
 <style scoped lang="scss">
 @import '../assets/style/partials/variables.scss';
   .container{
+    height: 130px;
     max-width: 1500px;
     margin: 0 auto;
     display: flex;
@@ -102,7 +103,7 @@ export default {
         text-transform: uppercase;
         font-weight: bold;
         height: 100%;
-        line-height: 100px;
+        line-height: 125px;
 
         &.active, &:hover{
           border-bottom: 5px solid $navcolor;
