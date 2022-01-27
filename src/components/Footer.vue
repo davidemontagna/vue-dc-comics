@@ -36,6 +36,15 @@
                     <img src="../assets/img/dc-logo-bg.png" alt="">
                 </div>            
         </div>
+        <div class="foot-bottom">
+            <div class="sign-up">
+                sign-up now!
+            </div>
+            <div class="socials">
+                FOLLOW US
+                <img :src="image.img" v-for="(image, index) in socialsLogo" :key="index">
+            </div>
+        </div>
   </footer>
 </template>
 
@@ -131,6 +140,23 @@ export default {
                 {
                     text: 'DC Power Visa'
                 },
+            ],
+            socialsLogo: [
+                {
+                    img: require('../assets/img/footer-facebook.png')
+                },
+                {
+                    img: require('../assets/img/footer-twitter.png')
+                },
+                {
+                    img: require('../assets/img/footer-youtube.png')
+                },
+                {
+                    img: require('../assets/img/footer-pinterest.png')
+                },
+                {
+                    img: require('../assets/img/footer-periscope.png')
+                },
             ]
         }
     }
@@ -192,6 +218,33 @@ footer{
             }
             
         }
+    }
+}
+
+.foot-bottom{
+    padding: 0 200px;
+    height: 100px;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .socials{
+        width: 25%;
+        font-weight: bold;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sign-up{
+        color: #fff;
+        padding: 10px;
+        width: 130px;
+        text-transform: uppercase;
+        border: 2px solid $navcolor;
     }
 }
 </style>
