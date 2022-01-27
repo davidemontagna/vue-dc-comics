@@ -62,11 +62,15 @@ export default {
 
     a{
       margin-left: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 15px;
-  }
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 15px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 
   
